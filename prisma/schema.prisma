@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://david:gtx650ti@62.146.226.20:3306/cidadania"
+}
+
+model Business {
+  id              Int         @id @default(autoincrement())
+  name            String
+  business_name   String 
+  address         String
+  maps_link       String
+  district        String?
+  description     String?
+  category        String?
+  delivery        Boolean 
+  workatbu        Boolean
+  image           Bytes?
+  whatsapp        String?
+  instagram       String?
+  phone           String?
+  image1          String?
+  image2          String?
+  image3          String?
+  image4          String?
+  image5          String?
+  filters         String?
+ }
+
+ model Auth {
+  id              Int         @id @default(autoincrement())
+  type            String 
+  email           String?
+  password        String
+ }
